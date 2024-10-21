@@ -1,3 +1,6 @@
+#python -m venv venv
+#.\venv\Scripts\activate
+#pip install flask
 from flask import Flask
 
 app = Flask(__name__)
