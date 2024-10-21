@@ -9,5 +9,9 @@ app = Flask(__name__)
 def index():
     return 'Olá Mundo!'
 
+@app.route("/contato")
+def contato():
+    return "breno.leonardo@ifsertao-pe.edu.br"
+
 if __name__ == '__main__':
     app.run()
