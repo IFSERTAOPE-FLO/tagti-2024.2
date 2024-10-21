@@ -1,13 +1,13 @@
 #python -m venv venv
 #.\venv\Scripts\activate
 #pip install flask
-from flask import Flask
+from flask import Flask, render_template
 
 app = Flask(__name__)
 
 @app.route('/')
 def index():
-    return 'Olá Mundo!'
+    return render_template("index.html")
 
 @app.route("/contato")
 def contato():
