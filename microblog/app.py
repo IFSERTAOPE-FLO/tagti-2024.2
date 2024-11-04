@@ -11,7 +11,16 @@ def index():
 
 @app.route("/contato")
 def contato():
-    return render_template("contato.html", tel="(87) 988889898", nome="Joao")
+    return render_template("contato.html", tel="(81) 988889898", nome="Joao")
+
+@app.route("/user/<nome>", defaults={"sobrenome": "Silva"})
+@app.route("/user/<nome>/<sobrenome>")
+def user(nome, sobrenome):
+    return f"Olá, {nome} {sobrenome}!"
+
+# Calculadora para somar dois números passados por parâmetro
+@app.route("/soma/<int:num1>/<int:num2>")
+
 
 if __name__ == '__main__':
     app.run()
