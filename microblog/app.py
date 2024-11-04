@@ -11,7 +11,7 @@ def index():
 
 @app.route("/contato")
 def contato():
-    return render_template("contato.html")
+    return render_template("contato.html", tel="(87) 988889898", nome="Joao")
 
 if __name__ == '__main__':
     app.run()

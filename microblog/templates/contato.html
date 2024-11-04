@@ -10,6 +10,10 @@
 <body>
     <div class="container">
         <h1>Contato</h1>
+        <div>
+            <p>Nome: {{ nome }}</p> 
+            <p>Fone: {{ tel }}</p>
+        </div>
         <form action="/contato" method="POST">
             <div class="form-group">
                 <label for="nome">Nome</label>
