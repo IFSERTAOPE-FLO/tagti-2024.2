@@ -20,7 +20,8 @@ def user(nome, sobrenome):
 
 # Calculadora para somar dois números passados por parâmetro
 @app.route("/soma/<int:num1>/<int:num2>")
-
+def soma(num1, num2):
+    return f"O resultado da soma é: {num1 + num2}"
 
 if __name__ == '__main__':
     app.run()
