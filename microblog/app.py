@@ -23,5 +23,10 @@ def user(nome, sobrenome):
 def soma(num1, num2):
     return f"O resultado da soma é: {num1 + num2}"
 
+# Minha página pessoal
+@app.route("/sobre")
+def sobre():
+    return render_template("sobre.html")
+
 if __name__ == '__main__':
     app.run()

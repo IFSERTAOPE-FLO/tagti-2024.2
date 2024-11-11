@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+</head>
+<body>
+    
+        <nav>
+            <a href="/">Home</a>
+            <a href="/sobre">Sobre</a>
+            <a href="/contato">Contato</a>
+        </nav>
+        <div class="container">
+        <header>
+            <h1>Quem sou eu</h1>
+            <p>Meu nome é Breno Leonardo, sou um desenvolvedor web e estou aprendendo a usar o Flask.</p>
+        </header>
+        <section>
+            <img src="{{ url_for('static', filename='img/foto_pessoal.jpg') }}" alt="Foto minha">
+            <aside>
+                <h2>Minhas habilidades</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>JavaScript</li>
+                    <li>Python</li>
+                </ul>
+            </aside>
+        </section>
+        <article>
+            <h3>Experiência profissional</h3>
+            <p>Trabalhei como desenvolvedor web em uma empresa de tecnologia por 5 anos.</p>
+        </article>
+    </div>
+    <footer>
+        <p>Desenvolvido por <a href="http://instagram.com/indicoir">Indico Ir!</a></p>
+    </footer>
+</body>
+</html>
