@@ -28,16 +28,17 @@ def soma(num1, num2):
 def sobre():
     return render_template("sobre.html")
 
-@app.route("/dados")
+@app.route("/dados", methods=["GET", "POST"])
 def dados():
-    return render_template("dados.html")
-
-@app.route("/recebe_dados", methods=["POST"])
-def recebe_dados():
-    nome = request.form["nome"]
-    email = request.form["email"]
-    msg = request.form["mensagem"]
-    return f"Nome: {nome}, Email: {email}, Mensagem: {msg}"
+    if request.method == "GET":
+        return render_template("dados.html")
+    elif request.method == "POST":
+        nome = request.form["nome"]
+        email = request.form["email"]
+        msg = request.form["mensagem"]
+        return f"Nome: {nome}, Email: {email}, Mensagem: {msg}"
+    else:
+        return "Método não permitido"
 
 if __name__ == '__main__':
     app.run()

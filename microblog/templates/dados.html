@@ -14,7 +14,7 @@
             <p>Nome: {{ nome }}</p> 
             <p>Fone: {{ tel }}</p>
         </div>
-        <form action="{{ url_for('recebe_dados') }}" method="POST">
+        <form action="{{ url_for('dados') }}" method="POST">
             <div class="form-group">
                 <label for="nome">Nome</label>
                 <input type="text" class="form-control" id="nome" name="nome">

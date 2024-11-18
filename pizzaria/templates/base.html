@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Pizza Nossa!</title>
+		<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilos.css') }}">
+	</head>
+	<body>
+		<nav>
+			<a href="/">Página Inicial </a> |
+			<a href="/cardapio">Cardápio</a> |
+			<a href="/avaliacoes">Avaliações </a> | 
+			<a href="/faleconosco">Fale conosco</a> | 
+			<a href="/login">Login</a> | 
+		</nav>
+	
+	     <main>
+	       	{% block conteudo %}
+		  	{% endblock %}
+	     </main>
+	</body>
+</html>
