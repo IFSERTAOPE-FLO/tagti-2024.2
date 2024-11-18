@@ -1,7 +1,7 @@
 #python -m venv venv
 #.\venv\Scripts\activate
 #pip install flask
-from flask import Flask, render_template
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
 
@@ -27,6 +27,17 @@ def soma(num1, num2):
 @app.route("/sobre")
 def sobre():
     return render_template("sobre.html")
+
+@app.route("/dados")
+def dados():
+    return render_template("dados.html")
+
+@app.route("/recebe_dados", methods=["POST"])
+def recebe_dados():
+    nome = request.form["nome"]
+    email = request.form["email"]
+    msg = request.form["mensagem"]
+    return f"Nome: {nome}, Email: {email}, Mensagem: {msg}"
 
 if __name__ == '__main__':
     app.run()
