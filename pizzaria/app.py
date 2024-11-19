@@ -1,6 +1,9 @@
 #python -m venv venv
 #.\venv\Scripts\activate
 #pip install flask
+# pip install python-dotenv
+#pip freeze > requirements.txt
+#pip install -r requirements.txt
 from flask import Flask, render_template, request
 
 app = Flask(__name__)
