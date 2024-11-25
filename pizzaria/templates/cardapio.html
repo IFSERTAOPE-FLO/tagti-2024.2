@@ -3,8 +3,13 @@
 {% block conteudo %}
 <h1>Cardápio</h1>
 <ul>
-    {% for pizza in pizzas %}
-        <li>{{ pizza.nome }} - R$ {{ pizza.preco }}</li>
-    {% endfor %}
+   {% for pizza in pizzas %}
+        <li>{{ pizza.nome }} - R$ {{ pizza.preco }}
+            <ul>
+                <li>{{ pizza.ingredientes }}</li>
+            </ul>
+        </li>
+     {% endfor %}
+
 </ul>
 {% endblock %}
