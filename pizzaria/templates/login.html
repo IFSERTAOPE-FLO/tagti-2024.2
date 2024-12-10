@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h1>Login</h1>
+{% set mensagem = get_flashed_messages(with_categories=true) %}
+{% if mensagem %}
+    {% for categoria, mensagem in mensagem %}
+        <div class="alert alert-{{ categoria }}" role="alert">
+            {{ mensagem }}
+        </div>
+    {% endfor %}
+{% endif %}
+<form action="/login" method="post">
+    <div class="mb-3">
+      <label for="email" class="form-label">Login: </label>
+      <input type="email" class="form-control" name="email" id="email" placeholder="Digite seu email">
+    </div>
+    <div class="mb-3">
+      <label for="senha" class="form-label">Senha: </label>
+      <input type="password" class="form-control" name="senha" id="senha" placeholder="Digite sua senha">
+    </div>
+    <button class="btn btn-primary" type="submit">Entrar</button>
+    </form>
+    <a href="/cadastro">Cadastre-se</a>
+{% endblock %}

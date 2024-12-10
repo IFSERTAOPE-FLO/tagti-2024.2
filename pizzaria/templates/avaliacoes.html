@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block conteudo %}
+<h1>Avaliações</h1>
+<ul>
+    {% for avaliacao in avaliacoes %}
+        <li>{{ avaliacao.nome }} - {{ avaliacao.comentario }}</li>
+        <!-- Estrelas -->
+        {% for i in range(avaliacao.nota) %}
+            <img src="{{ url_for('static', filename='img/star.png') }}" alt="Estrela" width="20">
+        {% endfor %}
+    {% endfor %}
+</ul>
+{% endblock %}
